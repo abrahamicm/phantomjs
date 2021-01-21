@@ -8,7 +8,7 @@ es un navegador sin interfaz grafica
 
 Para comenzar instaciamos una variable que requiera **webpage** y ejecute el metodo **create();**
 
-```javascript var page = require('webpage').create(); ```
+´´´javascript var page = require('webpage').create(); ´´´
 
 luego ejecutamos el metodo **page.open**, que recibe dos parametros, el primero es la url que queremos abrir y el segundo es una funcion anonima.  
 ``` page.open(url,funccion) ``` 
