@@ -8,27 +8,31 @@ es un navegador sin interfaz grafica
 
 Para comenzar instaciamos una variable que requiera **webpage** y ejecute el metodo **create();**
 
-~~~javascript var page = require('webpage').create(); ~~~
+~~~javascript
+var page = require('webpage').create(); ç
+~~~
 
 luego ejecutamos el metodo **page.open**, que recibe dos parametros, el primero es la url que queremos abrir y el segundo es una funcion anonima.  
-``` page.open(url,funccion) ``` 
-
+~~~javascript
+page.open(url,funccion) 
+~~~
 ###### ejemplo.
 
 
-```
+~~~javascript
 var page = require('webpage').create(); 
 page.open('http://www.google.com', function(){
 	console.log("se ha cargado la pagina")
 })
-```
+~~~
 
 para acceder a los agumentos del script hay que requerir el modulo **'system'**  
-``` var system = require('system') ```
-
+~~~javascript 
+var system = require('system') 
+~~~
 ###### ejemplo.
 
-```
+~~~javascript
 var page = require('webpage').create();
 var system = require('system');
 page.open(system.arg[1], function(status){
@@ -36,22 +40,24 @@ page.open(system.arg[1], function(status){
 	phantom.exit();
 })
 
-```
+~~~
 el metodo **page.render** hace una captura de pantalla de la pagina, toma como argumento el nombre de la imagen con la que queremos gardar la catura.  
-``` page.render('nombre.extencion '); ```
+~~~javascript
+ page.render('nombre.extencion '); 
+ ~~~
 ###### ejemplo.
-```
+~~~javascript
 page.render('google.png');
-```
+~~~
 
 el metodo **page.evaluate** se usa para ejecutar codigo javascript dentro del navegador y recibe una funcion anonima, que se encargara de realizar cada unas de la instrccione que estan dentro del ella.  
-``` 
+~~~javascript 
 page.evaluate(function(){
 // codigo ..
 })
-```
+~~~
 ###### ejemplo.
-```
+~~~javascript
 var page = require ('webpage').create();
 var system = require ('system');
 page.open(system.args[1], function(status){
@@ -61,25 +67,29 @@ page.open(system.args[1], function(status){
 console.log(titulo);
 phantom.exit();
 })
-```
+~~~
 **page.includesJs** se utiliza para incluir algun script js, recice como parametros la url de donde se encuentra alojado el archivo y una funcion .  
-``` page.includeJs('url', funcion) ``` 
+~~~javascript 
+page.includeJs('url', funcion) 
+~~~
 ###### ejemplo.
-``` 
+~~~javascript 
 page.includesJs('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', function(){
 // codigo 
 });
-```
+~~~
 **page.onLoadFinished** es un metodo que se iguala a una funcion que se ejecutara cuando la pagina haya cargado.  
-``` page.onLoadFinished = funcion; ```
+~~~javascript 
+page.onLoadFinished = funcion; 
+~~~
 ###### ejemplo.
-```
+~~~javascript
 vpage.onLoadFinished  = function(){
 	console.log("ha terminado de cargar la pagina");
 	page.render('otrabusquedaenamazon.png')
 }
 page
-```
+~~~
 ### Resumen
 **requires**  
 var page = requiere('webpage').create();
