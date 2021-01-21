@@ -1,9 +1,9 @@
 # Phantomjs
 es un navegador sin interfaz grafica
 ### instrucciones 
-1.descargar el archivo
-2.agregarlo en las variables de entorno 
-3.ejecutar comandos usando el prefijo phantomjs
+1. descargar el archivo
+2. agregarlo en las variables de entorno 
+3. ejecutar comandos usando el prefijo phantomjs
 
 
 Para comenzar instaciamos una variable que requiera **webpage** y ejecute el metodo **create();**
