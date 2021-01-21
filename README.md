@@ -1,14 +1,14 @@
 # Phantomjs
 es un navegador sin interfaz grafica
 ### instrucciones 
-1. descargar el archivo
-2. agregarlo en las variables de entorno 
-3. ejecutar comandos usando el prefijo phantomjs
+1.descargar el archivo
+2.agregarlo en las variables de entorno 
+3.ejecutar comandos usando el prefijo phantomjs
 
 
 Para comenzar instaciamos una variable que requiera **webpage** y ejecute el metodo **create();**
 
-``` var page = require('webpage').create(); ```
+```javascript var page = require('webpage').create(); ```
 
 luego ejecutamos el metodo **page.open**, que recibe dos parametros, el primero es la url que queremos abrir y el segundo es una funcion anonima.  
 ``` page.open(url,funccion) ``` 
